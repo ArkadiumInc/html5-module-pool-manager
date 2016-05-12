@@ -8,6 +8,16 @@ function PoolManager(){
 }
 module.exports = PoolManager;
 
+PoolManager.prototype.destroy = function() {
+    for(var k in this._pools) {
+        if(this._pools.hasOwnProperty(k)) {
+            var pool = this._pools[k];
+            pool.destroy();
+            this._pools[k] = null;
+        }
+    }
+};
+
 PoolManager.prototype.registerPool = function(name, objectFactory, initialSize, growIncrement) {
     'use strict';
     if(this._pools[name]) {
