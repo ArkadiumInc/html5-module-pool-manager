@@ -138,6 +138,6 @@ describe('Pool tests', function() {
         expect(obj).not.toBe(undefined);
         expect(obj.state).not.toBe(null);
         expect(obj.state).not.toBe(undefined);
-        expect(obj.state).toEqual(STATE_INITIALIZED); //FIXME: should it be actually destroyed?
+        expect(obj.state).toEqual(STATE_INITIALIZED);
     });
 });
