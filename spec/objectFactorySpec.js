@@ -63,7 +63,7 @@ describe('Object Factory tests', function() {
         expect(obj.state).toEqual(STATE_CREATED);
     });
 
-    if('Test object factory object initialization', function() {
+    it('Test object factory object initialization', function() {
         var obj = {};
 
         expect(function() {
@@ -75,7 +75,7 @@ describe('Object Factory tests', function() {
         expect(obj.state).toEqual(STATE_INITIALIZED);
     });
 
-    if('Test object factory object initialization with parameter', function() {
+    it('Test object factory object initialization with parameter', function() {
         var obj = {};
 
         expect(function() {
@@ -87,7 +87,7 @@ describe('Object Factory tests', function() {
         expect(obj.param).toEqual(42);
     });
 
-    if('Test object factory object reset', function() {
+    it('Test object factory object reset', function() {
         var obj = {};
 
         expect(function() {
@@ -99,11 +99,11 @@ describe('Object Factory tests', function() {
         expect(obj.state).toEqual(STATE_RESET);
     });
 
-    if('Test object factory object destroy', function() {
+    it('Test object factory object destroy', function() {
         var obj = {};
 
         expect(function() {
-            ObjectFactory.destroyObject(obj);
+            objectFactory.destroyObject(obj);
         }).not.toThrow();
 
         expect(obj.state).not.toBe(null);
