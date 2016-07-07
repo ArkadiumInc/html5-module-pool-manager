@@ -25,6 +25,7 @@ Pool.prototype.takeObject = function(/*...*/){
     this._growIfNeeded();
 
     var object = this._objects.pop();
+    Array.prototype.unshift.call(arguments, object);
     this._factory.initObject.apply(this._factory, arguments);
     return object;
 };
@@ -32,11 +33,10 @@ Pool.prototype.takeObject = function(/*...*/){
 Pool.prototype.returnObject = function(object){
     'use strict';
     //check if object already in pool
-    //if it is then it's noop
+    //if it is then it's exception
     for(var i=0; i<this._objects.length; i++){
         if(this._objects[i] === object) {
-            console.log('Trying to return object to pool that is already in pool');
-            return;
+            throw new Error('Trying to return object to pool that is already in pool');
         }
     }
 
