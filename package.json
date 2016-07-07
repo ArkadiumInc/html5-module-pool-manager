@@ -1,27 +1,27 @@
 {
-  "name": "arkadium-eventbus",
+  "name": "arkadium-pool-manager",
   "version": "1.0.0",
-  "description": "Realization of event bus functionality",
+  "description": "Implementation of pool & pool manager",
   "main": "index.js",
   "scripts": {
     "test": "jasmine-node spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArkadiumInc/html5-module-eventbus.git"
+    "url": "git+https://github.com/ArkadiumInc/html5-module-pool-manager.git"
   },
   "keywords": [
-    "events",
-    "bus",
-    "topic",
-    "listener"
+    "pool",
+    "pool manager",
+    "factory",
+    "object factory"
   ],
   "author": "Arkadium Inc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ArkadiumInc/html5-module-eventbus/issues"
+    "url": "https://github.com/ArkadiumInc/html5-module-pool-manager/issues"
   },
-  "homepage": "https://github.com/ArkadiumInc/html5-module-eventbus#readme",
+  "homepage": "https://github.com/ArkadiumInc/html5-module-pool-manager#readme",
   "devDependencies": {
     "jasmine": "^2.4.1",
     "jasmine-node": "^1.14.5"
