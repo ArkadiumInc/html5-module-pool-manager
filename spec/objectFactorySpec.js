@@ -48,6 +48,7 @@ describe('Object Factory tests', function() {
 
     it('Test object factory object creation', function() {
         var obj = null;
+
         expect(function() {
             obj = objectFactory.createObject();
         }).not.toThrow();
